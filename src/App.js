@@ -9,6 +9,7 @@ import Landing from './components/page/Landing';
 import SignUp from './components/organisms/SignUp';
 import Login from './components/organisms/Login';
 import Dashboard from './components/page/Dashboard';
+import Quiz from './components/organisms/Quiz';
 import PrivateRoute from './components/organisms/PrivateRoute';
 
 import {setCurrentUser, logoutuser} from './redux/actions/authActions';
@@ -43,7 +44,9 @@ class App extends Component {
 							<div className='ms-app--main'>
 								{/* TODO: Dashboard route should be protected */}
 								<Switch>
-									<PrivateRoute exact path='/dashboard' component={Dashboard} />
+									{/* <PrivateRoute exact path='/dashboard' component={Dashboard} /> */}
+									<Route exact path='/dashboard' component={Dashboard} />
+									<Route exact path='/quiz' component={Quiz} />
 								</Switch>
 							</div>
 						</div>
